@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML RESULT</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Result Calculate System</h2>
+
+        <form id="resultForm">
+            <div class="form-group">
+                <label for="StudentName">Student Name:</label>
+                <input type="text" id="StudentName" placeholder="Enter Student Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rollNo">Roll Number:</label>
+                <input type="text" id="rollNo" placeholder="Enter Roll Number" required>
+            </div>
+
+            <div class="form-group">
+                <label>Subject Marks (Out of 100):</label>
+                <div class="marks-grid">
+                    <input type="number" class="subject-marks" placeholder="English" min="0" max="100" required>
+                    <input type="number" class="subject-marks" placeholder="Computer" min="0" max="100" required>
+                    <input type="number" class="subject-marks" placeholder="Science" min="0" max="100" required>
+                    <input type="number" class="subject-marks" placeholder="Maths" min="0" max="100" required>
+                    <input type="number" class="subject-marks" placeholder="Physics" min="0" max="100" required>
+                    <input type="number" class="subject-marks" placeholder="Chemistry" min="0" max="100" required>
+                </div>
+                <p class="error" id="erroressage" style="display: none;">Please enter valid marks between 0 and 100 for all subjects.</p>
+            </div>
+
+            <button type="submit">Calculate Result</button>
+        </form>
+
+        <div id="resultCard" style="display: none;">
+            <h3>Result Summary</h3>
+            <div class="result-item"><strong>Name:</strong> <span id="resName"></span></div>
+            <div class="result-item"><strong>Roll No: </strong> <span id="resRollNo"></span></div>
+            <div class="result-item"><strong>Total Marks:</strong> <span id="resTotal"></span></div>
+            <div class="result-item"><strong>Percentage:</strong> <span id="resPercentage"></span></div>
+            <div class="result-item"><strong>Grade:</strong> <span id="resGrade"></span></div>
+            <div class="result-item"><strong>Status:</strong> <span id="resStatus"></span></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
